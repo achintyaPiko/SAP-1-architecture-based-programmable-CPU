@@ -58,3 +58,28 @@ In this implementation of the modified SAP-1 architecture, the MAR and the 16×8
 
 > *Diagram source: "Digital Computer Electronics" by Malvino & Brown*
 
+---
+
+## Build & Deploy on FPGA (Papilio Pro)
+
+This project targets the **Papilio Pro FPGA development board**, which features the **Xilinx Spartan-6 LX9 FPGA**. The source files are written in Verilog and can be synthesized using open-source or proprietary FPGA toolchains. With certain level of understanding and modification in the `Top_Level_Integration.v` and `PinLayout.ucf` the code can be synthesized and implemented for other FPGA boards as well.
+
+### Recommended Requirements
+
+- Papilio Pro board (Spartan-6 LX9)
+- Xilinx ISE WebPACK (or Vivado if supported via translation)
+- Papilio Loader (to upload `.bit` file to FPGA)
+- USB connection and drivers for Papilio Pro
+
+### Build Instructions
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/achintyaPiko/SAP-1-architecture-based-programmable-CPU.git
+   cd SAP-1-architecture-based-programmable-CPU
+   ```
+2. **Open the project in Xilinx ISE**
+3. **Change the contents of `ram_init.bin` to create custom programs for the SAP-1 CPU. Opcodes and their intended uses have been outlined above.**
+4. **Run Synthesis, Implementation, and Bitstream Generation**
+5. **Upload bitstream to FPGA using Papilio Loader**
+
