@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj SAP-I_architecture_MP -o /home/ise/SAP-I_architecture_MP/InstructionRegister.tfi -lib work /home/ise/SAP-I_architecture_MP//InstructionRegister.v -module InstructionRegister -template /opt/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

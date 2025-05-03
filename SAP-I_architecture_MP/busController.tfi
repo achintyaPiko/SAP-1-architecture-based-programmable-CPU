@@ -1,0 +1,16 @@
+
+
+
+// Instantiate the module
+busController instance_name (
+    .clk(clk), 
+    .adder_out(adder_out), 
+    .inst_reg_out(inst_reg_out), 
+    .memory_out(memory_out), 
+    .pc_out(pc_out), 
+    .accum_out(accum_out), 
+    .bus_controlSignals(bus_controlSignals), 
+    .bus_driven(bus_driven)
+    );
+
+

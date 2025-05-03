@@ -1,0 +1,2 @@
+vhdtdtfi -lang verilog -prj SAP-I_architecture_MP -o /home/ise/SAP-I_architecture_MP/ProgramCounter.tfi -lib work /home/ise/SAP-I_architecture_MP//ProgramCounter.v -module ProgramCounter -template /opt/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj SAP-I_architecture_MP -o /home/ise/SAP-I_architecture_MP/ProgramCounter.tfi -lib work /home/ise/SAP-I_architecture_MP//ProgramCounter.v -module ProgramCounter -template /opt/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

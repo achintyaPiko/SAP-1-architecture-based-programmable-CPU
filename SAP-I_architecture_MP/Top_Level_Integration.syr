@@ -1,0 +1,807 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
+ 
+--> 
+Reading design: Top_Level_Integration.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top_Level_Integration.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top_Level_Integration"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : Top_Level_Integration
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/SAP-I_architecture_MP/ProgramCounter.v" into library work
+Parsing module <ProgramCounter>.
+Analyzing Verilog file "/home/ise/SAP-I_architecture_MP/multiSegmentDriver.v" into library work
+Parsing module <multiSegmentDriver>.
+Analyzing Verilog file "/home/ise/SAP-I_architecture_MP/MemoryWrapperModule.v" into library work
+Parsing module <MemoryWrapperModule>.
+Analyzing Verilog file "/home/ise/SAP-I_architecture_MP/InstructionRegister.v" into library work
+Parsing module <InstructionRegister>.
+Analyzing Verilog file "/home/ise/SAP-I_architecture_MP/controlSignalGenerator.v" into library work
+Parsing module <controlSignalGenerator>.
+Analyzing Verilog file "/home/ise/SAP-I_architecture_MP/ClockModule.v" into library work
+Parsing module <ClockModule>.
+Analyzing Verilog file "/home/ise/SAP-I_architecture_MP/busController.v" into library work
+Parsing module <busController>.
+Analyzing Verilog file "/home/ise/SAP-I_architecture_MP/AdderSubtractor.v" into library work
+Parsing module <AdderSubtractor>.
+Analyzing Verilog file "/home/ise/SAP-I_architecture_MP/accumlator.v" into library work
+Parsing module <accumlator>.
+Analyzing Verilog file "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.v" into library work
+Parsing module <Top_Level_Integration>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Top_Level_Integration>.
+
+Elaborating module <ClockModule>.
+
+Elaborating module <controlSignalGenerator>.
+
+Elaborating module <InstructionRegister>.
+
+Elaborating module <accumlator>.
+
+Elaborating module <busController>.
+
+Elaborating module <AdderSubtractor>.
+
+Elaborating module <ProgramCounter>.
+
+Elaborating module <MemoryWrapperModule>.
+Reading initialization file \"ram_init.bin\".
+
+Elaborating module <multiSegmentDriver>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Top_Level_Integration>.
+    Related source file is "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Top_Level_Integration> synthesized.
+
+Synthesizing Unit <ClockModule>.
+    Related source file is "/home/ise/SAP-I_architecture_MP/ClockModule.v".
+    Found 16-bit register for signal <divider>.
+    Found 16-bit adder for signal <divider[15]_GND_2_o_add_1_OUT> created at line 12.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+Unit <ClockModule> synthesized.
+
+Synthesizing Unit <controlSignalGenerator>.
+    Related source file is "/home/ise/SAP-I_architecture_MP/controlSignalGenerator.v".
+        LOAD = 4'b0000
+        ADD = 4'b0001
+        SUB = 4'b0010
+        STORE = 4'b0100
+        OUT = 4'b1110
+        HLT = 4'b1111
+    Found 3-bit register for signal <state>.
+    Found 3-bit adder for signal <state[2]_GND_3_o_add_1_OUT> created at line 87.
+    Found 8x3-bit Read Only RAM for signal <_n0094>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+	inferred  18 Multiplexer(s).
+Unit <controlSignalGenerator> synthesized.
+
+Synthesizing Unit <InstructionRegister>.
+    Related source file is "/home/ise/SAP-I_architecture_MP/InstructionRegister.v".
+    Found 8-bit register for signal <busPrimitive>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <InstructionRegister> synthesized.
+
+Synthesizing Unit <accumlator>.
+    Related source file is "/home/ise/SAP-I_architecture_MP/accumlator.v".
+    Found 8-bit register for signal <dataRegPrimitive>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <accumlator> synthesized.
+
+Synthesizing Unit <busController>.
+    Related source file is "/home/ise/SAP-I_architecture_MP/busController.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   5 Multiplexer(s).
+Unit <busController> synthesized.
+
+Synthesizing Unit <AdderSubtractor>.
+    Related source file is "/home/ise/SAP-I_architecture_MP/AdderSubtractor.v".
+    Found 9-bit subtractor for signal <GND_7_o_GND_7_o_sub_1_OUT> created at line 10.
+    Found 9-bit adder for signal <n0014> created at line 10.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
+Unit <AdderSubtractor> synthesized.
+
+Synthesizing Unit <ProgramCounter>.
+    Related source file is "/home/ise/SAP-I_architecture_MP/ProgramCounter.v".
+    Found 4-bit register for signal <progCount>.
+    Found 4-bit adder for signal <progCount[3]_GND_8_o_add_1_OUT> created at line 13.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+Unit <ProgramCounter> synthesized.
+
+Synthesizing Unit <MemoryWrapperModule>.
+    Related source file is "/home/ise/SAP-I_architecture_MP/MemoryWrapperModule.v".
+    Set property "KEEP = TRUE" for signal <_n0033>.
+WARNING:Xst:647 - Input <bus<7:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4-bit register for signal <marAddress>.
+    Found 128-bit register for signal <n0033>.
+    Found 8-bit 16-to-1 multiplexer for signal <data> created at line 30.
+    Summary:
+	inferred 132 D-type flip-flop(s).
+	inferred  17 Multiplexer(s).
+Unit <MemoryWrapperModule> synthesized.
+
+Synthesizing Unit <multiSegmentDriver>.
+    Related source file is "/home/ise/SAP-I_architecture_MP/multiSegmentDriver.v".
+    Found 4-bit register for signal <digit_2>.
+    Found 4-bit register for signal <digit_3>.
+    Found 4-bit register for signal <digit_4>.
+    Found 4-bit register for signal <enableDigit>.
+    Found 4-bit register for signal <presentSegmentData>.
+    Found 2-bit register for signal <presentSegmentNumber>.
+    Found 4-bit register for signal <digit_1>.
+    Found 2-bit adder for signal <presentSegmentNumber[1]_GND_10_o_add_8_OUT> created at line 74.
+    Found 4x4-bit Read Only RAM for signal <presentSegmentNumber[1]_GND_10_o_wide_mux_6_OUT>
+    Found 16x7-bit Read Only RAM for signal <_n0051>
+    Found 4-bit 4-to-1 multiplexer for signal <presentSegmentNumber[1]_digit_4[3]_wide_mux_7_OUT> created at line 52.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <multiSegmentDriver> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x7-bit single-port Read Only RAM                    : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+ 8x3-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 1
+ 9-bit addsub                                          : 1
+# Registers                                            : 15
+ 128-bit register                                      : 1
+ 16-bit register                                       : 1
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 8
+ 8-bit register                                        : 3
+# Multiplexers                                         : 44
+ 1-bit 2-to-1 multiplexer                              : 20
+ 3-bit 2-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+ 8-bit 16-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 21
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <ClockModule>.
+The following registers are absorbed into counter <divider>: 1 register on signal <divider>.
+Unit <ClockModule> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ProgramCounter>.
+The following registers are absorbed into counter <progCount>: 1 register on signal <progCount>.
+Unit <ProgramCounter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <controlSignalGenerator>.
+The following registers are absorbed into counter <state>: 1 register on signal <state>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0094> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 3-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <controlSignalGenerator> synthesized (advanced).
+
+Synthesizing (advanced) Unit <multiSegmentDriver>.
+The following registers are absorbed into counter <presentSegmentNumber>: 1 register on signal <presentSegmentNumber>.
+INFO:Xst:3231 - The small RAM <Mram__n0051> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <presentSegmentData> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_presentSegmentNumber[1]_GND_10_o_wide_mux_6_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <presentSegmentNumber> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <multiSegmentDriver> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+ 8x3-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 1
+ 9-bit addsub                                          : 1
+# Counters                                             : 4
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 180
+ Flip-Flops                                            : 180
+# Multiplexers                                         : 141
+ 1-bit 16-to-1 multiplexer                             : 8
+ 1-bit 2-to-1 multiplexer                              : 124
+ 4-bit 4-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <InstructionRegister> ...
+
+Optimizing unit <Top_Level_Integration> ...
+
+Optimizing unit <controlSignalGenerator> ...
+
+Optimizing unit <MemoryWrapperModule> ...
+
+Optimizing unit <multiSegmentDriver> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top_Level_Integration, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 205
+ Flip-Flops                                            : 205
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Top_Level_Integration.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 443
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 15
+#      LUT2                        : 10
+#      LUT3                        : 106
+#      LUT4                        : 16
+#      LUT5                        : 31
+#      LUT6                        : 187
+#      MUXCY                       : 23
+#      MUXF7                       : 16
+#      MUXF8                       : 8
+#      VCC                         : 1
+#      XORCY                       : 25
+# FlipFlops/Latches                : 205
+#      FD                          : 42
+#      FDC                         : 3
+#      FDCE                        : 4
+#      FDE                         : 128
+#      FDRE                        : 28
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 25
+#      IBUF                        : 3
+#      OBUF                        : 22
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             205  out of  11440     1%  
+ Number of Slice LUTs:                  369  out of   5720     6%  
+    Number used as Logic:               369  out of   5720     6%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    394
+   Number with an unused Flip Flop:     189  out of    394    47%  
+   Number with an unused LUT:            25  out of    394     6%  
+   Number of fully used LUT-FF pairs:   180  out of    394    45%  
+   Number of unique control sets:        11
+
+IO Utilization: 
+ Number of IOs:                          26
+ Number of bonded IOBs:                  26  out of    102    25%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------+---------------------------------------+-------+
+Clock Signal                                       | Clock buffer(FF name)                 | Load  |
+---------------------------------------------------+---------------------------------------+-------+
+SYS_clk(Mmux_SYS_clk1:O)                           | BUFG(*)(B_register/dataRegPrimitive_7)| 160   |
+clk_32                                             | BUFGP                                 | 16    |
+SignalGen/clk_inv(SignalGen/clk_inv1:O)            | NONE(*)(SignalGen/state_2)            | 3     |
+clkModule/divider_15                               | NONE(display/presentSegmentNumber_1)  | 10    |
+segment_latch(SignalGen/Mmux_Reg_segment_latch11:O)| NONE(*)(display/digit_4_3)            | 16    |
+---------------------------------------------------+---------------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.834ns (Maximum Frequency: 146.320MHz)
+   Minimum input arrival time before clock: 5.262ns
+   Maximum output required time after clock: 7.541ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SYS_clk'
+  Clock period: 6.834ns (frequency: 146.320MHz)
+  Total number of paths / destination ports: 35002 / 308
+-------------------------------------------------------------------------
+Delay:               6.834ns (Levels of Logic = 5)
+  Source:            InstReg/busPrimitive_6 (FF)
+  Destination:       Memory/memory_15_111 (FF)
+  Source Clock:      SYS_clk rising
+  Destination Clock: SYS_clk rising
+
+  Data Path: InstReg/busPrimitive_6 to Memory/memory_15_111
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            13   0.447   1.161  InstReg/busPrimitive_6 (InstReg/busPrimitive_6)
+     LUT3:I0->O            1   0.205   0.580  SignalGen/Mcount_state_xor<2>111_SW0 (N28)
+     LUT5:I4->O           32   0.205   1.520  SignalGen/Mmux_Reg_ir_en_bus11 (ir_en_bus)
+     LUT5:I2->O           19   0.205   1.319  bus<1> (bus<1>)
+     LUT6:I2->O            1   0.203   0.684  Memory/mux5511 (Memory/memory[6][7]_accumalatorDataLine[7]_mux_10_OUT<7>)
+     LUT3:I1->O            1   0.203   0.000  Memory/memory_15_79_dpot (Memory/memory_15_79_dpot)
+     FDE:D                     0.102          Memory/memory_15_79
+    ----------------------------------------
+    Total                      6.834ns (1.570ns logic, 5.264ns route)
+                                       (23.0% logic, 77.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_32'
+  Clock period: 1.952ns (frequency: 512.334MHz)
+  Total number of paths / destination ports: 136 / 16
+-------------------------------------------------------------------------
+Delay:               1.952ns (Levels of Logic = 17)
+  Source:            clkModule/divider_0 (FF)
+  Destination:       clkModule/divider_15 (FF)
+  Source Clock:      clk_32 rising
+  Destination Clock: clk_32 rising
+
+  Data Path: clkModule/divider_0 to clkModule/divider_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  clkModule/divider_0 (clkModule/divider_0)
+     INV:I->O              1   0.206   0.000  clkModule/Mcount_divider_lut<0>_INV_0 (clkModule/Mcount_divider_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  clkModule/Mcount_divider_cy<0> (clkModule/Mcount_divider_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  clkModule/Mcount_divider_cy<1> (clkModule/Mcount_divider_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  clkModule/Mcount_divider_cy<2> (clkModule/Mcount_divider_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  clkModule/Mcount_divider_cy<3> (clkModule/Mcount_divider_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  clkModule/Mcount_divider_cy<4> (clkModule/Mcount_divider_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  clkModule/Mcount_divider_cy<5> (clkModule/Mcount_divider_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  clkModule/Mcount_divider_cy<6> (clkModule/Mcount_divider_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  clkModule/Mcount_divider_cy<7> (clkModule/Mcount_divider_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  clkModule/Mcount_divider_cy<8> (clkModule/Mcount_divider_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  clkModule/Mcount_divider_cy<9> (clkModule/Mcount_divider_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  clkModule/Mcount_divider_cy<10> (clkModule/Mcount_divider_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  clkModule/Mcount_divider_cy<11> (clkModule/Mcount_divider_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  clkModule/Mcount_divider_cy<12> (clkModule/Mcount_divider_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  clkModule/Mcount_divider_cy<13> (clkModule/Mcount_divider_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  clkModule/Mcount_divider_cy<14> (clkModule/Mcount_divider_cy<14>)
+     XORCY:CI->O           1   0.180   0.000  clkModule/Mcount_divider_xor<15> (Result<15>)
+     FD:D                      0.102          clkModule/divider_15
+    ----------------------------------------
+    Total                      1.952ns (1.373ns logic, 0.579ns route)
+                                       (70.3% logic, 29.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SignalGen/clk_inv'
+  Clock period: 2.568ns (frequency: 389.380MHz)
+  Total number of paths / destination ports: 7 / 3
+-------------------------------------------------------------------------
+Delay:               2.568ns (Levels of Logic = 1)
+  Source:            SignalGen/state_0 (FF)
+  Destination:       SignalGen/state_0 (FF)
+  Source Clock:      SignalGen/clk_inv rising
+  Destination Clock: SignalGen/clk_inv rising
+
+  Data Path: SignalGen/state_0 to SignalGen/state_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             28   0.447   1.234  SignalGen/state_0 (SignalGen/state_0)
+     INV:I->O              1   0.206   0.579  SignalGen/Mcount_state_xor<0>11_INV_0 (SignalGen/Mcount_state)
+     FDC:D                     0.102          SignalGen/state_0
+    ----------------------------------------
+    Total                      2.568ns (0.755ns logic, 1.813ns route)
+                                       (29.4% logic, 70.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkModule/divider_15'
+  Clock period: 2.190ns (frequency: 456.663MHz)
+  Total number of paths / destination ports: 19 / 10
+-------------------------------------------------------------------------
+Delay:               2.190ns (Levels of Logic = 1)
+  Source:            display/presentSegmentNumber_0 (FF)
+  Destination:       display/presentSegmentNumber_0 (FF)
+  Source Clock:      clkModule/divider_15 rising
+  Destination Clock: clkModule/divider_15 rising
+
+  Data Path: display/presentSegmentNumber_0 to display/presentSegmentNumber_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              10   0.447   0.856  display/presentSegmentNumber_0 (display/presentSegmentNumber_0)
+     INV:I->O              1   0.206   0.579  display/Mcount_presentSegmentNumber_xor<0>11_INV_0 (display/Result<0>)
+     FD:D                      0.102          display/presentSegmentNumber_0
+    ----------------------------------------
+    Total                      2.190ns (0.755ns logic, 1.435ns route)
+                                       (34.5% logic, 65.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SYS_clk'
+  Total number of paths / destination ports: 160 / 160
+-------------------------------------------------------------------------
+Offset:              5.262ns (Levels of Logic = 3)
+  Source:            rst (PAD)
+  Destination:       Memory/memory_15_63 (FF)
+  Destination Clock: SYS_clk rising
+
+  Data Path: rst to Memory/memory_15_63
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.467  rst_IBUF (rst_IBUF)
+     LUT4:I2->O            1   0.203   0.580  Memory/_n0065_inv_SW0 (N46)
+     LUT6:I5->O           30   0.205   1.263  Memory/_n0065_inv (Memory/_n0065_inv)
+     FDE:CE                    0.322          Memory/memory_15_0
+    ----------------------------------------
+    Total                      5.262ns (1.952ns logic, 3.310ns route)
+                                       (37.1% logic, 62.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SignalGen/clk_inv'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.014ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       SignalGen/state_2 (FF)
+  Destination Clock: SignalGen/clk_inv rising
+
+  Data Path: rst to SignalGen/state_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.362  rst_IBUF (rst_IBUF)
+     FDC:CLR                   0.430          SignalGen/state_0
+    ----------------------------------------
+    Total                      3.014ns (1.652ns logic, 1.362ns route)
+                                       (54.8% logic, 45.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clkModule/divider_15'
+  Total number of paths / destination ports: 32 / 11
+-------------------------------------------------------------------------
+Offset:              4.821ns (Levels of Logic = 2)
+  Source:            display/presentSegmentData_1 (FF)
+  Destination:       a (PAD)
+  Source Clock:      clkModule/divider_15 rising
+
+  Data Path: display/presentSegmentData_1 to a
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.447   1.021  display/presentSegmentData_1 (display/presentSegmentData_1)
+     LUT4:I0->O            1   0.203   0.579  display/Mram__n0051311 (d_OBUF)
+     OBUF:I->O                 2.571          d_OBUF (d)
+    ----------------------------------------
+    Total                      4.821ns (3.221ns logic, 1.600ns route)
+                                       (66.8% logic, 33.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SYS_clk'
+  Total number of paths / destination ports: 144 / 10
+-------------------------------------------------------------------------
+Offset:              7.541ns (Levels of Logic = 13)
+  Source:            InstReg/busPrimitive_7 (FF)
+  Destination:       carry_out (PAD)
+  Source Clock:      SYS_clk rising
+
+  Data Path: InstReg/busPrimitive_7 to carry_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            12   0.447   1.013  InstReg/busPrimitive_7 (InstReg/busPrimitive_7)
+     LUT2:I0->O            2   0.203   0.617  SignalGen/Mmux_Reg_a_load121_SW4 (N22)
+     LUT6:I5->O            3   0.205   0.650  SignalGen/Mmux_Reg_subtract11 (subtract)
+     MUXCY:CI->O           1   0.019   0.000  AddSub/Maddsub_resultComplete_cy<0> (AddSub/Maddsub_resultComplete_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  AddSub/Maddsub_resultComplete_cy<1> (AddSub/Maddsub_resultComplete_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  AddSub/Maddsub_resultComplete_cy<2> (AddSub/Maddsub_resultComplete_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  AddSub/Maddsub_resultComplete_cy<3> (AddSub/Maddsub_resultComplete_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  AddSub/Maddsub_resultComplete_cy<4> (AddSub/Maddsub_resultComplete_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  AddSub/Maddsub_resultComplete_cy<5> (AddSub/Maddsub_resultComplete_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  AddSub/Maddsub_resultComplete_cy<6> (AddSub/Maddsub_resultComplete_cy<6>)
+     MUXCY:CI->O           0   0.019   0.000  AddSub/Maddsub_resultComplete_cy<7> (AddSub/Maddsub_resultComplete_cy<7>)
+     XORCY:CI->O           2   0.180   0.721  AddSub/Maddsub_resultComplete_xor<8> (AddSub/resultComplete<8>)
+     LUT2:I0->O            1   0.203   0.579  carry_out1 (carry_out_OBUF)
+     OBUF:I->O                 2.571          carry_out_OBUF (carry_out)
+    ----------------------------------------
+    Total                      7.541ns (3.961ns logic, 3.580ns route)
+                                       (52.5% logic, 47.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SignalGen/clk_inv'
+  Total number of paths / destination ports: 66 / 2
+-------------------------------------------------------------------------
+Offset:              7.385ns (Levels of Logic = 6)
+  Source:            SignalGen/state_1 (FF)
+  Destination:       carry_out (PAD)
+  Source Clock:      SignalGen/clk_inv rising
+
+  Data Path: SignalGen/state_1 to carry_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             24   0.447   1.420  SignalGen/state_1 (SignalGen/state_1)
+     LUT4:I0->O            4   0.203   0.684  SignalGen/Mmux_Reg_a_load121 (SignalGen/Mmux_Reg_a_load12)
+     LUT6:I5->O            1   0.205   0.000  AddSub/Maddsub_resultComplete_lut<7> (AddSub/Maddsub_resultComplete_lut<7>)
+     MUXCY:S->O            0   0.172   0.000  AddSub/Maddsub_resultComplete_cy<7> (AddSub/Maddsub_resultComplete_cy<7>)
+     XORCY:CI->O           2   0.180   0.721  AddSub/Maddsub_resultComplete_xor<8> (AddSub/resultComplete<8>)
+     LUT2:I0->O            1   0.203   0.579  carry_out1 (carry_out_OBUF)
+     OBUF:I->O                 2.571          carry_out_OBUF (carry_out)
+    ----------------------------------------
+    Total                      7.385ns (3.981ns logic, 3.404ns route)
+                                       (53.9% logic, 46.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock SYS_clk
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+SYS_clk          |    6.834|         |         |         |
+SignalGen/clk_inv|    6.528|         |         |         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SignalGen/clk_inv
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+SignalGen/clk_inv|    2.568|         |         |         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clkModule/divider_15
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+clkModule/divider_15|    2.190|         |         |         |
+segment_latch       |    1.579|         |         |         |
+--------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_32
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_32         |    1.952|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock segment_latch
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+SYS_clk        |    1.199|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 2.30 secs
+ 
+--> 
+
+
+Total memory usage is 388252 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

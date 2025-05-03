@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+ClockModule instance_name (
+    .clk_in(clk_in), 
+    .halt(halt), 
+    .scaled_clk_out(scaled_clk_out), 
+    .SYS_clk(SYS_clk)
+    );
+
+

@@ -1,0 +1,25 @@
+
+
+
+// Instantiate the module
+controlSignalGenerator instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .opcode(opcode), 
+    .hlt(hlt), 
+    .pc_inc(pc_inc), 
+    .pc_en_bus(pc_en_bus), 
+    .mem_load(mem_load), 
+    .mem_store(mem_store), 
+    .mem_en_bus(mem_en_bus), 
+    .ir_load(ir_load), 
+    .ir_en_bus(ir_en_bus), 
+    .a_load(a_load), 
+    .a_en_bus(a_en_bus), 
+    .b_load(b_load), 
+    .subtract(subtract), 
+    .adder_en_bus(adder_en_bus), 
+    .segment_latch(segment_latch)
+    );
+
+

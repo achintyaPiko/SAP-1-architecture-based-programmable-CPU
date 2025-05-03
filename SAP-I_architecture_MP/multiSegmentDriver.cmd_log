@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj SAP-I_architecture_MP -o /home/ise/SAP-I_architecture_MP/multiSegmentDriver.tfi -lib work /home/ise/SAP-I_architecture_MP//multiSegmentDriver.v -module multiSegmentDriver -template /opt/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

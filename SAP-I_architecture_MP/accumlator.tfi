@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+accumlator instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .load(load), 
+    .bus(bus), 
+    .data(data)
+    );
+
+

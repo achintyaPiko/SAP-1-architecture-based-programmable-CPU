@@ -1,0 +1,119 @@
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 
+xst -intstyle ise -ifn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.xst" -ofn "/home/ise/SAP-I_architecture_MP/Top_Level_Integration.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PinLayout.ucf -p xc6slx9-tqg144-3 Top_Level_Integration.ngc Top_Level_Integration.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_Integration_map.ncd Top_Level_Integration.ngd Top_Level_Integration.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_Integration_map.ncd Top_Level_Integration.ncd Top_Level_Integration.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level_Integration.twx Top_Level_Integration.ncd -o Top_Level_Integration.twr Top_Level_Integration.pcf -ucf PinLayout.ucf 
+bitgen -intstyle ise -f Top_Level_Integration.ut Top_Level_Integration.ncd 

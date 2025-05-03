@@ -1,0 +1,17 @@
+
+
+
+// Instantiate the module
+MemoryWrapperModule instance_name (
+    .bus(bus), 
+    .accumalatorDataLine(accumalatorDataLine), 
+    .clk(clk), 
+    .rst(rst), 
+    .load(load), 
+    .store(store), 
+    .data(data), 
+    .displayRAMregister1(displayRAMregister1), 
+    .displayRAMregister2(displayRAMregister2)
+    );
+
+

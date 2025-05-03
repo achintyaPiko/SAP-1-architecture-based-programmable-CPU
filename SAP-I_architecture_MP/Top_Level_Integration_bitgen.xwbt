@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/SAP-I_architecture_MP/Top_Level_Integration.ncd
+OUTFILE=/home/ise/SAP-I_architecture_MP/Top_Level_Integration.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=/home/ise/SAP-I_architecture_MP
+LICENSE=WebPack
+USER_INFO=212917519_0_0_052
