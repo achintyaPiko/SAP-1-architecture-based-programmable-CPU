@@ -31,3 +31,30 @@ It serves as both a learning tool and a programmable CPU core capable of executi
 ### STA Instruction (Custom Extension)
 
 The `STA` (Store Accumulator) instruction is not part of the original SAP-1 specification. It allows writing the contents of the accumulator to a specified memory address, enabling two-way memory interaction. This addition makes the CPU more programmable and practical and closer to Turing Completeness.
+
+---
+
+## Architecture Overview
+
+The design follows the classic SAP-1 architecture as described in *Digital Computer Electronics* by Albert Paul Malvino and Jerald A. Brown. It features a single 8-bit data bus (W bus) connecting all major components, including:
+
+- Program Counter
+- Memory Address Register (MAR)
+- 16x8 RAM
+- Instruction Register
+- Accumulator
+- B Register
+- Adder/Subtractor
+- Output Register
+- Control Sequencer
+
+Each component is activated by dedicated control signals issued by the controller/sequencer based on the current instruction and timing step.  
+In this implementation of the modified SAP-1 architecture, the MAR and the 16×8 RAM are combined into a single module called the `MemoryController`. This module is additionally connected to the accumulator (A register) to support the custom `STA` (Store Accumulator) instruction.
+ 
+
+### Block Diagram
+
+![SAP-1 Block Diagram](<insert-image-path-or-link-here>)
+
+> *Diagram source: "Digital Computer Electronics" by Malvino & Brown*
+
