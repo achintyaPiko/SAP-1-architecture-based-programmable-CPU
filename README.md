@@ -54,7 +54,7 @@ In this implementation of the modified SAP-1 architecture, the MAR and the 16×8
 
 ### Block Diagram
 
-![SAP-1 Block Diagram](<insert-image-path-or-link-here>)
+![SAP-1 Block Diagram](SAP-1_architectural_diagram.png)
 
 > *Diagram source: "Digital Computer Electronics" by Malvino & Brown*
 
