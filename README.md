@@ -49,7 +49,7 @@ The design follows the classic SAP-1 architecture as described in *Digital Compu
 - Control Sequencer
 
 Each component is activated by dedicated control signals issued by the controller/sequencer based on the current instruction and timing step.  
-In this implementation of the modified SAP-1 architecture, the MAR and the 16×8 RAM are combined into a single module called the `MemoryController`. This module is additionally connected to the accumulator (A register) to support the custom `STA` (Store Accumulator) instruction.
+In this implementation of the modified SAP-1 architecture, the MAR and the 16×8 RAM are combined into a single module called the `MemoryWrapperModule`. This module is additionally connected to the accumulator (A register) to support the custom `STA` (Store Accumulator) instruction.
  
 
 ### Block Diagram
