@@ -1,0 +1,21 @@
+location: 0x0|		0F	//LDA $Fh  
+	  0x1|		1E	//ADD $Eh  
+	  0x2|		4D	//STA $Dh
+	  0x3|		E0  	//OUT
+	  0x4|		1E  	//ADD $Eh
+	  0x5|		4F  	//STA $Fh
+	  0x6|		E0	//OUT
+	  0x7|		1D	//ADD $Dh
+	  0x8|		4E	//STA $Eh
+	  0x9|		E0	//OUT 
+	  0xA|		1F 	//ADD $Fh
+	  0xB|		4D	//STA $Dh 
+	  0xC|		E0	//OUT
+	  0xD|		00 	//R3 
+	  0xE|		01  	//R2
+	  0xF|		00  	//R1
+
+
+
+//`ram_init.bin` in the current directory contains uncommented code for CPU execution.
+// current directory also contains bitstream for direct testing.
