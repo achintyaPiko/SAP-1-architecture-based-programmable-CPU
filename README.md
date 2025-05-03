@@ -1,4 +1,4 @@
-# SAP-1 Architecture-Based Programmable CPU
+# SAP-1 Architecture Based Programmable CPU
 
 This project is a Verilog implementation of the **SAP-1 (Simple As Possible)** CPU architecture, extended with a custom `STA` (Store Accumulator) instruction and deployed on the **Papilio Pro FPGA development board** featuring a **Spartan-6 FPGA**.
 
