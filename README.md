@@ -83,3 +83,45 @@ This project targets the **Papilio Pro FPGA development board**, which features 
 4. **Run Synthesis, Implementation, and Bitstream Generation**
 5. **Upload bitstream to FPGA using Papilio Loader**
 
+### Notes
+
+- The `MemoryController` module initializes with a binary file `ram_init.bin`, which is preloaded with sample instructions.  
+  You can modify this file using any text editor (e.g., `gedit`) to implement custom programs.
+
+- Output is visualized through:
+  - **LEDs**, which reflect the contents of memory address `0Dh`
+  - **4-digit seven-segment display**, which shows the contents of addresses `0Eh` and `0Fh`
+
+## Example Program: Fibonacci Sequence
+
+This example demonstrates a simple Fibonacci sequence generator using the custom `STA` instruction for memory writes, and `OUT` to visualize each result.
+
+### Program Listing
+```text
+Address | Instruction | Comment
+--------|-------------|-------------------------------
+0x00    | 0F          | LDA $0F ; Load R1 (initially 0) into A
+0x01    | 1E          | ADD $0E ; Add R2 (initially 1)
+0x02    | 4D          | STA $0D ; Store result in R3
+0x03    | E0          | OUT     ; Output R3
+0x04    | 1E          | ADD $0E ; A = R3 + R2
+0x05    | 4F          | STA $0F ; Store result back in R1
+0x06    | E0          | OUT
+0x07    | 1D          | ADD $0D ; A = R1 + R3
+0x08    | 4E          | STA $0E ; Store in R2
+0x09    | E0          | OUT
+0x0A    | 1F          | ADD $0F ; A = R2 + R1
+0x0B    | 4D          | STA $0D ; Update R3
+0x0C    | E0          | OUT
+0x0D    | 00          | R3 initial value
+0x0E    | 01          | R2 initial value (1)
+0x0F    | 00          | R1 initial value
+```
+
+### Expected Behavior
+
+- The CPU successively computes and stores Fibonacci numbers by reusing memory registers (`0D`, `0E`, and `0F`) to hold and rewrite upon intermediate values.
+- Each computed value is output using the `OUT` instruction.
+- The example assembly code is structured such that the PC overflows and starts from instruction 0x00 again, while retaining the computed Fibonacci values in memory (allowing it to compute all  8-bit Fibonacci values). This effectively implements a loop without requiring a dedicated JMP opcode, albeit through careful program structuring.
+
+
